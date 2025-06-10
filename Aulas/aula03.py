@@ -19,7 +19,3 @@
 #print('A raiz do numero {} e igual a {}'.format(num, floor(raiz)))
 
 # OBS: não precisa colocar o math.sqrt apenas o sqrt
-
-import emoji
-
-print(emoji.emojize('Olá mundo! :OK_hand_light_skin_tone:'))
