@@ -10,3 +10,15 @@ c. misturar latas e galões, de forma que o desperdício de tinta seja menor. Ac
 de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
 """
 
+areaPintada = float(input('Insira em metros a area a ser pintada: m²'))
+
+lataTinta = 18
+precoLata = 80
+galaoTinta = 3.6
+precoGalao = 25
+misturaGalaoELata = (galaoTinta * lataTinta) * 0.10
+precoMistura -= misturaGalaoELata
+
+print('Se você comprar latas de 18 litros o preço sai por R${} lembrando que 1 litro equivale a 6 metros'.format(precoLata / areaPintada))
+print('Se você comprar galões de 3.6 litros o preço sai por R${} lembrando que 1 litro equivale a 6 metros'.format(precoGalao / areaPintada))
+print('Se você misturar o galão e a lata você ganha desconto de 10%'.format(precoMistura))
