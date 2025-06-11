@@ -36,14 +36,34 @@ fevereiro terá 29 dias).
 
 ano = int(input('Digite o ano: '))
 dia = int(input('Digite o dia: '))
-mes = int(input('Digite o mês em numeros: '))
+mes = int(input('Digite o mês em números: '))
 
-if ano % 4 == 0:
-    if ano % 100 != 0 or ano % 400 == 0:
-        if mes == 3 and dia <= 29:
-            print('Data valida: {}/{}/{}'.format(dia, mes, ano))
-        print('Data valida: {}/{}/{}'.format(dia, mes, ano))
-    else:
-        print('Data valida: {}/{}/{}'.format(dia, mes, ano))
+trinta_e_um_dias = [1, 3, 5, 7, 8, 10, 12]
+trinta_dias = [4, 6, 9, 11]
+fevereiro = 2
+
+if 1 <= mes <= 12:
+        if mes in trinta_e_um_dias and 1 <= dia <= 31:
+            print('Data válida: {}/{}/{}'.format(dia, mes, ano))
+        elif mes in trinta_dias and 1 <= dia <= 30:
+            print('Data válida: {}/{}/{}'.format(dia, mes, ano))
+        elif mes == fevereiro:
+            if ((ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0)):
+                if 1 <= dia <= 29:
+                    print('Data válida: {}/{}/{}'.format(dia, mes, ano))
+                else:
+                    print('Data inválida: Fevereiro bissexto vai até 29 dias.')
+            else:
+                if 1 <= dia <= 28:
+                    print('Data válida: {}/{}/{}'.format(dia, mes, ano))
+                else:
+                    print('Data inválida: Fevereiro comum vai até 28 dias.')
+        else:
+            print('Dia inválido.')
 else:
-    print('Data valida: {}/{}/{}'.format(dia, mes, ano))
+        print('Mês inválido.')
+            
+                
+
+
+
