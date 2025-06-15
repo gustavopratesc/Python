@@ -1,10 +1,11 @@
 """VERIFICAR SE O ANO É BIXSEXTO"""
 
-
+from datetime import date
 ano = int(input('Insira o ano para saber se é bixsexto ou não: '))
 
 ano_bixsexto = (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0)
-
+if ano == 0:
+    ano = date.today().year
 if ano_bixsexto:
     print(f'Sim o ano {ano} é bixsexto!')
 else:
