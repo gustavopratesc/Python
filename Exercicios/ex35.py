@@ -20,4 +20,4 @@ else:
     print('Insira um número conversão 1, 2 ou 3')
 
 print(f'A conversão escolhida foi: {conversao}')
-print(f'O número nessa versão fica {resultado}')
+print(f'O número nessa versão fica {resultado[2:]}')
