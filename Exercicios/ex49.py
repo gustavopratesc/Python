@@ -1,6 +1,5 @@
 primeiro_termo = int(input('Digite o primeiro termo de uma PA: '))
 razao = int(input('Digite a razão da PA: '))
-
-for i in range(1, 11):
-    termo = primeiro_termo + razao * i
-    print(termo)
+decimo = primeiro_termo + (10 - 1) * razao
+for i in range(primeiro_termo, decimo + razao, razao):
+    print(i)
