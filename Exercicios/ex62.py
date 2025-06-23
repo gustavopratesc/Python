@@ -11,5 +11,5 @@ while True:
     contador += 1
     soma_numeros += numero
         
-print(contador)
-print(soma_numeros)
+print(f'Numero contagem: {contador}')
+print(f'Soma dos números {soma_numeros}')
