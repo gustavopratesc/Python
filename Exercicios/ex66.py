@@ -22,6 +22,34 @@ while True:
     else:
         print('Você perdeu!')
 
+## ou
 
+v = 0
+
+while True:
+    jogador = int(input('Digite um valor: '))
+    computador = randint(0, 10)
+    total = jogador + computador
+    tipo = ' '
+    while tipo not in 'PI':
+            tipo = str(input('Par ou impar? [P/I]: ')).strip().upper()[0]
+    print(f'Você jogou {jogador} e o computador jogou {computador}. Total de {total}', end='')
+    print(f'Deu par' if total % 2 == 0 else 'Deu impar')
+    if tipo == 'P':
+         if total % 2 == 0:
+              print('Você ganhou!')
+              v += 1
+         else:
+              print('Você perdeu!!')
+              break
+    elif tipo == 'I':
+         if total % 2 == 1:
+              print('Você ganhou')
+              v += 1
+         else:
+              print('Você perdeu!')
+              break
+    print('Vamos jogar novamente? ...')
+    print(f'GAME OVER!! Você ganhou {v} vezes')
 
 
