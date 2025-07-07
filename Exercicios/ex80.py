@@ -99,9 +99,75 @@
 
 # O usuário digita nomes e notas de 5 pessoas. Ao final, mostre a lista de nomes ordenada da maior para a menor nota, sem usar .sort().
 
-pares = []
-impares = []
+# pares = []
+# impares = []
+
+# for i in range(1, 11):
+#     n = int(input('Insira números para saber par e impar: '))
+#     if n % 2 == 0:
+#         pares.append(n)
+#     else:
+#         impares.append(n)
+
+# pares.sort()
+# impares.sort()
+
+# print(f'Números pares {pares}')
+# print(f'Números impares {impares}')
+
+
+# contador = 0
+# soma = []
+
+# while True:
+#     n = int(input('Insira um número: '))
+#     contador += 1
+#     soma.append(n)
+#     continuar = int(input('Insira 1 para continuar 0 para fechar: '))
+#     if continuar == 1:
+#         continue
+#     else:
+#         media = sum(soma) / contador
+#         print(f'A media da lista forcenida é {media:.2f}')
+#         break
 
 
 
+# lista = []
 
+# while True:
+#     entrada = str(input('Insira um valor ou (fim para terminar:) ')).strip().lower()
+#     if entrada in ['fim']:
+#         for i in range(len(lista)-1, -1, -1):
+#             print(lista[i])
+#         break
+#     else:
+#         lista.append(entrada)
+#         print('Você resolveu continuar insira mais um valor!')
+
+# Desafio 10 – Ranking de pontuação
+
+# O usuário digita nomes e notas de 5 pessoas. Ao final, mostre a lista de nomes ordenada da maior para a menor nota, sem usar .sort().
+
+ranking = []
+
+for i in range(1, 6):
+    nome_pessoa = str(input('Insira o nome: ')).strip().title()
+    nota_pessoa = float(input('Insira a nota: '))
+    pessoa = [nome_pessoa, nota_pessoa]
+
+    if not ranking or nota_pessoa < ranking[-1][1]:
+        ranking.append(pessoa)
+        print('Essa pessoa foi para ultimo da lista! ')
+    else:
+        for i in range(len(ranking)):
+            if nota_pessoa > ranking[i][1]:
+                ranking.insert(i, pessoa)
+                print(f'O nome foi {nome_pessoa} A nota foi {nota_pessoa} sua posição {i}')
+                break
+        
+print('Ranking final: ')
+for i, aluno in enumerate(ranking, 1):
+    print(f'{i}° lugar: {aluno[0]} com nota {aluno[1]}')
+
+    
