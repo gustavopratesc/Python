@@ -12,4 +12,6 @@ lista[1].sort()
 print(f'Numeros pares: {lista[0]}')
 print(f'Numeros impares: {lista[1]}')
 
-            
+## ou
+
+
