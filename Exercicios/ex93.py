@@ -26,3 +26,8 @@ elif pessoa_trabalhadora['CTPS'] == 0:
 else:
     print('Digite valores corretos!')
 
+
+# ou um print desse jeito
+
+for k, v in pessoa_trabalhadora.items():
+    print(f'  - {k} tem valor {v}')

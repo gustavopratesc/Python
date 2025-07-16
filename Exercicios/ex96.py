@@ -29,6 +29,7 @@ while True:
             print('----- VIZUALIZAÇÃO DE JOGADORES -----')  
             for i, j in enumerate(lista_jogadores):
                 print(f'{i} Nome: {j["Nome"]} - Gols: {j["Gols"]} - Total: {j["Total"]}')
+                
             exit()
         else:
             print('Escolha entre [S/N]!!')
