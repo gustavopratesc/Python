@@ -1,90 +1,59 @@
-dados = dict()
-dados = {'nome':'Pedro', 'idade': 25}
-print(dados['nome']) # <-- pedro
-print(dados['idade']) # <-- 25
-dados['sexo'] = 'M' # <-- não existe append nos dicionarios é feito assim
+## listas compostas
+## listas dentro de listas
 
-filme = {
-    'Titulo': 'Star Wars',
-    'Ano': 1997,
-    'Diretor': 'George Lucas'
-}
+pessoas = [['Pedro', 19], ['Maria', 25], ['João', 35]]
+print(pessoas[0][0]) # no indice 0 de pessoas, eu e nessse indice 0 eu quero o item 0 que é o 'Pedro'
 
-print(filme.values()) # <-- vai mostrar todos os valores, como star wars, 1997, george lucas
-print(filme.keys()) # <-- vai pegar o titulo, ano, e diretor
-print(filme.items()) # <-- vai pegar tudo
+# teste = list()
+# teste.append('Gustavo')
+# teste.append(21)
+# galera = list()
+# galera.append(teste[:]) # <-- vai criar uma copia
+# teste[0] = 'Maria'
+# teste[1] = 25
+# galera.append(teste[:])
+# print(galera)
 
-for k, v in filme.items():
-    print(f'O {k} é {v}')
+galera = [['João', 12], ['Maria', 13], ['Joaquim', 34], ['Ana', 19]]
 
+## fazer um print da lista com informações
 
-pessoas = {
-    'nome': 'Gustavo',
-    'sexo': 'M',
-    'idade': 22
-}
+for p in galera: # <-- para cada pessoa em galera vai printar ate o final da lista
+    print(p)
 
-print(pessoas['nome'])
-print(pessoas['idade'])
-print(f'O {pessoas["nome"]} tem {pessoas["idade"]} anos') # <-- usa aspas duplas dentro dos colchetes
+for p in galera: # <-- para cada pessoa em galera vai printar ate o final da lista
+    print(p[0]) ## <-- quer so o nome pega o indice 0
 
-print(pessoas.keys())
-print(pessoas.values())
-print(pessoas.items())
+for p in galera: # <-- para cada pessoa em galera vai printar ate o final da lista
+    print(p[1]) ## <-- quer a idade pega o indice 1
 
-for k in pessoas.keys(): # <-- mostra so nome, sexo, idade
-    print(k)
-for k in pessoas.values(): # <-- mostra o Gustavo, M, 22
-    print(k)
+## formatando com f strings
 
-for k, v in pessoas.items(): # o K pega as keys nome idade etc.., o V pega os valores Gustavo, M etc...
-    print(f'{k} = {v}')
+for p in galera:
+    print(f'{p[0]} tem {p[1]} anos!')
 
-#del pessoas('sexo') # <-- aqui deleta
-pessoas['nome'] = 'Leandro' # o nome Gustavo Vira Leandro
+## outro exemplo muito bom
 
-pessoas['peso'] = 98.5 # <-- aqui adiciona na lista o peso
+galera = list()
+dado = list()
+totalmai = totalmen = 0
 
+for i in range(0, 3):
+    dado.append(str(input('Nome: ')))
+    dado.append(int(input('Idade: ')))
+    galera.append(dado[:]) # <-- vai criar uma copia
+    dado.clear() # <-- vai excluir
 
-##
-## Juntar dicionarios com listas
-estado = {
-    'uf': 'Rio de janeiro', 
-    'sigla': 'RJ' 
-}
-estado2 = {
-    'uf': 'São Paulo',
-    'sigla': 'SP'
-}
-brasil = []
-brasil.append(estado) 
-brasil.append(estado2)
+#print(galera)
 
-print(brasil)
-print(brasil[0])
-print(brasil[1])
-print(brasil[0]['uf']) # <-- aqui puxa o estado do indice 0
-print(brasil[0]['sigla']) # <-- aqui puxa a sigla do indice 0
+## print usando for com pessoas com idade acima de 21
 
-#####
+for p in galera:
+    if p[1] >= 21:
+        print(f'{p[0]} é maior de idade')
+        totalmai += 1
+    else:
+        print(f'{p[0]} é menor de idade')
+        totalmen += 1
 
-## codigos importantes usando FOR
-
-state = dict()
-brazil = list()
-
-for c in range(3):
-    state['uf'] = str(input('Unidade Federativa: '))
-    state['sigla'] = str(input('Sigla do Estado: '))
-    brazil.append(state.copy())  # <-- aqui usa o copy em vez do [:]
-
-## print formatado
-for e in brasil:
-    for k, v in e.items():
-        print(f'O campo {k} tem o valor {v}')
-
-    ## ou
-    
-for e in brasil:
-    for v in e.values():
-        print(v)
+print(f'Temos {totalmai} maiores de idade e {totalmen} menores de idade')

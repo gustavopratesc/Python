@@ -36,37 +36,37 @@ contador(primeiro, segundo, terceiro)
 
 ## ou for do professor
 
-def contador(i, f, p):
-    if p <= 0:
-        p *= -1
-    print('-=' * 20)
-    print(f'Contagem de {i} ate o {f} de {p} em {p}')
-    sleep(2.5)
+# def contador(i, f, p):
+#     if p <= 0:
+#         p *= -1
+#     print('-=' * 20)
+#     print(f'Contagem de {i} ate o {f} de {p} em {p}')
+#     sleep(2.5)
 
 
-    if i < f:
-        cont = 1
-        while cont <= f:
-            print(f'{c} ', end='', flush=True) # <-- o flush vai fazer a contagem com 0.5 milisegundos
-            sleep(0.5)
-            cont += p
-        print('FIM!')
-    else:
-        cont = 1
-        while cont >= f:
-            primeiro(f'{cont} ', end='', flush=True)
-            sleep(0.5)
-            cont -= p
-        print('FIM!')
+#     if i < f:
+#         cont = 1
+#         while cont <= f:
+#             print(f'{c} ', end='', flush=True) # <-- o flush vai fazer a contagem com 0.5 milisegundos
+#             sleep(0.5)
+#             cont += p
+#         print('FIM!')
+#     else:
+#         cont = 1
+#         while cont >= f:
+#             primeiro(f'{cont} ', end='', flush=True)
+#             sleep(0.5)
+#             cont -= p
+#         print('FIM!')
     
 
 
 
-# programa principal
-contador(1, 10, 1)
-contador(10, 0, 2)
-print('Agora é a sua vez de personalizar a contagem!')
-ini = int(input('Inicio:  '))
-fim = int(input('Fim:     '))
-pas = int(input('Passo:   '))
-contador(ini, fim, pas)
+# # programa principal
+# contador(1, 10, 1)
+# contador(10, 0, 2)
+# print('Agora é a sua vez de personalizar a contagem!')
+# ini = int(input('Inicio:  '))
+# fim = int(input('Fim:     '))
+# pas = int(input('Passo:   '))
+# contador(ini, fim, pas)
